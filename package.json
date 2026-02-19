@@ -1,0 +1,48 @@
+{
+  "name": "react-tools",
+  "displayName": "react-tools",
+  "description": "react-tools",
+  "version": "0.1.0",
+  "publisher": "SPK80",
+  "repository": "https://github.com/SPK80/react-tools",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.newComponent",
+        "title": "NewComponent"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.newComponent",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "lint": "eslint",
+    "watch": "tsc -watch -p ./",
+    "vsix": "vsce package"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
+    "@types/node": "^22",
+    "@types/vscode": "^1.100.0",
+    "eslint": "^9.13.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
+  },
+  "license": "MIT"
+}
