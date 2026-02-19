@@ -7,7 +7,7 @@ export interface I${name}Props {
   className?: string;
 }
 export const ${name} = ({ className }: I${name}Props) => {
-  return <div className={className}>${name}</div>;
+  return <${name}Wrapper className={className}>${name}</${name}Wrapper>;
 };`;
 
 export const stylesContent = (
